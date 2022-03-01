@@ -28,6 +28,17 @@ The project was primary covered using unit tests. Though I have briefly used Cyp
 
 run `make test` for all tests
 
+## Notes
+
+- Due to an unexpected issue faced with the PostgresDB conn, a lot of time was wasted on fixing it. To that end, I was unable to write frontend tests for the main page at the very least. I have left the skeleton test file in the code as `Todo.txt` atm. In all honesty, I am dissapointed with my test coverage.
+
+- Attempted to show a wide variety of skills from DevOps, Backend, to Frontend development - through the use of some nice tools such as storybook, and redoc. I am keen to here your opinions on these tools!
+
+- **Total Time Spent**:
+  - **Coding:** 3 hrs
+  - **Docs:** 1 hr
+  - **Debugging:** 2/3 hrs
+
 ## Next Steps
 
 Some ideas around where we can take this app next. 
