@@ -26,7 +26,7 @@ Now, run `make start-init` - that's all, enjoy the app on `http://localhost:3000
 
 The project was primary covered using unit tests. Though I have briefly used Cypress in the past, I would have taken up too much refreshing my memory and upskilling for this take home assignment to include integration tests.
 
-run `make test` for all tests
+run `make test-api` for all tests
 
 ## Notes
 
