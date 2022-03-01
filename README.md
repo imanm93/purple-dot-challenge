@@ -15,7 +15,7 @@ source code for the 🟣 take home challenge
 
 Please see installations instructions [here](./docs/setup.md).
 
-Now, run `make start-init` - that's all, enjoy the app! 😎
+Now, run `make start-init` - that's all, enjoy the app on `http://localhost:3000` locally! 😎
 
 ## Table of Contents  
 
