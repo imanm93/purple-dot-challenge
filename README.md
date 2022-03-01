@@ -19,8 +19,8 @@ Now, run `make start-init` - that's all, enjoy the app! 😎
 
 ## Table of Contents  
 
-[1.0 Backend Design](../purple-dot-challenge/docs/api.md)  
-[1.1 Frontend Design](../purple-dot-challenge/docs/client.md)
+[1.0 Backend Design](./docs/api.md)  
+[1.1 Frontend Design](./docs/client.md)
 
 ## Tests
 
