@@ -13,7 +13,7 @@ source code for the 🟣 take home challenge
 - docker-compose
 - make
 
-Please see installations instructions [here](../purple-dot-challenge/docs/setup.md).
+Please see installations instructions [here](./docs/setup.md).
 
 Now, run `make start-init` - that's all, enjoy the app! 😎
 
