@@ -17,7 +17,7 @@ Other than the above smart and dump components we have a generic api client (usi
 1. run `docker-compose up`
 2. open your browser to `http://localhost:6006`
 
-![storybook](/docs/storybook.png)
+![storybook](/docs/storbook.png)
 
 #### How to run client?
 
