@@ -2,7 +2,7 @@
 
 ### 🏗️ Code Design
 
-We used clean architecture, DDD, and REST API design in mind when developing this todo app. In following these principles, we are able to achieve software best practices of SOLID (and nowadays TOUCH).
+We used clean architecture, DDD, and REST API design in mind when developing this todo app. In following these principles, we are able to achieve software best practices of SOLID.
 
 ```
 todo_api
