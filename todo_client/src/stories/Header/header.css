@@ -1,0 +1,33 @@
+.wrapper {
+    font-family: sans-serif;
+    border-bottom: 1px solid rgb(84, 105, 212);
+    padding: 15px 20px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+}
+
+svg {
+    display: inline-block;
+    vertical-align: top;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1;
+    margin: 6px 0 6px 10px;
+    display: inline-block;
+    color: rgb(84, 105, 212);
+    vertical-align: top;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    margin: 6px 0 6px 10px;
+    display: block;
+    color: #333;
+}

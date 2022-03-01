@@ -1,0 +1,50 @@
+.todo-button {
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    box-shadow: rgb(84, 105, 212) 0px 0px 4px;
+    margin: 5px;
+}
+
+.todo-button--primary {
+    color: white;
+    background-color: rgb(84, 105, 212);
+}
+
+.todo-button--secondary {
+    color: rgb(84, 105, 212);
+    background-color: white;
+    border: 1px solid rgb(84, 105, 212);
+}
+
+.todo-button--tertiary {
+    color: rgb(84, 105, 212);
+    background-color: white;
+    border: none;
+}
+
+.todo-button--small {
+    font-size: 12px;
+    padding: 10px 16px;
+}
+
+.todo-button--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+}
+
+.todo-button--large {
+    font-size: 16px;
+    padding: 12px 24px;
+}
+
+.todo-button--danger {
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    box-shadow: red 0px 0px 4px;
+}

@@ -1,0 +1,153 @@
+import React from "react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import { todoApi } from "../../services/todoApi";
+import { Task } from "../../types/Types";
+import { ToDo } from "./Todo";
+import { v4 } from 'uuid';
+
+const api = todoApi()
+api.retrieveTasks = jest.fn()
+api.retrieveTasks = jest.fn()
+api.retrieveTask = jest.fn()
+api.addTask = jest.fn()
+api.updateTask = jest.fn()
+api.deleteTask = jest.fn()
+api.clearTasks = jest.fn()
+
+const now = new Date().toISOString()
+
+const ids = [v4(), v4(), v4()]
+
+const results: Task[] = [
+    { id: ids[0], text: "task started challenge", status: "ACTIVE", created_at: now, updated_at: now },
+    { id: ids[1], text: "task finished challenge", status: "COMPLETED", created_at: now, updated_at: now },
+    { id: ids[3], text: "task finish tests", status: "ACTIVE", created_at: now, updated_at: now }
+];
+
+const activeListId = 'active-tasks-list'
+const completedListId = 'completed-tasks-list'
+
+// const mockRetreive = () => {
+//     api.retrieveTasks.mockReset();
+//     api.retrieveTasks.mockImplementation(async () => results);
+// }
+
+describe("Todo page", () => {
+//   describe("on retreiving tasks", () => {
+//     it("should show all tasks by status", async () => {
+//         mockRetreive()
+
+//         await act(async () => render(<ToDo />));
+
+//         expect(api.retrieveTasks.mock.calls.length).toEqual(1);
+//         expect(screen.queryAllByTestId(activeListId).length).toBe(2);
+//         expect(screen.queryAllByTestId(completedListId).length).toBe(1);
+//     });
+//   });
+
+//   describe("on add task", () => {
+//     it("should add new task", async () => {
+//         mockRetreive()
+
+//         const mockNewTask: Task = {
+//             id: v4(),
+//             text: 'do some more cool things',
+//             status: 'ACTIVE',
+//             created_at: new Date().toISOString(),
+//             updated_at: new Date().toISOString()
+//         }
+
+//         api.retrieveTasks.mockReset();
+//         api.retrieveTasks.mockImplementation(
+//             async () => {
+//                 return results.concat([mockNewTask]);
+//             }
+//         );
+//         await act(async () => render(<ToDo />));
+//         await act(async () => {
+//             const addBtn = screen.queryByText("Add Task");
+//             fireEvent.click(addBtn);
+//         });
+
+//         expect(api.addTask.mock.calls).toEqual(mockNewTask);
+//         expect(screen.queryAllByTestId(activeListId).length).toBe(3);
+//         expect(screen.queryAllByTestId(completedListId).length).toBe(1);
+//     });
+//   });
+
+//   describe("on update task", () => {
+//     it("should mark task as completed", async () => {
+//         mockRetreive()
+
+//         const mockUpdatedTask: Task = {
+//             id: ids[2],
+//             text: 'task finished challenge',
+//             status: 'ACTIVE',
+//             created_at: new Date().toISOString(),
+//             updated_at: new Date().toISOString()
+//         }
+
+//         api.retrieveTasks.mockReset();
+//         api.retrieveTasks.mockImplementation(
+//             async () => {
+//                 return [results[0], mockUpdatedTask, results[2]];
+//             }
+//         );
+
+//         await act(async () => render(<ToDo />));
+//         await act(async () => {
+//             const addBtn = screen.queryByText("checkbox");
+//             fireEvent.click(addBtn);
+//         });
+
+//         expect(api.updateTask.mock.calls).toEqual(mockUpdatedTask);
+//         expect(screen.queryAllByTestId(activeListId).length).toBe(3);
+//     });
+//   });
+
+//   describe("on delete task", () => {
+//     it("should delete selected task", async () => {
+//         mockRetreive()
+
+//         api.retrieveTasks.mockReset();
+//         api.retrieveTasks.mockImplementation(
+//             async () => {
+//                 return results.slice(1);
+//             }
+//         );
+
+//         await act(async () => render(<ToDo />));
+//         await act(async () => {
+//             const addBtn = screen.queryByText("ⓧ");
+//             fireEvent.click(addBtn);
+//         });
+
+//         expect(api.deleteTask.mock.calls).toEqual(ids[0]);
+//         expect(screen.queryAllByTestId(activeListId).length).toBe(1);
+//         expect(screen.queryAllByTestId(completedListId).length).toBe(1);
+//     });
+//   });
+
+//   describe("on clear tasks", () => {
+//     it("should clear all tasks", async () => {
+//         mockRetreive()
+
+//         await act(async () => render(<ToDo />));
+//         await act(async () => {
+//             const addBtn = screen.queryByText("Clear");
+//             fireEvent.click(addBtn);
+//         });
+
+//         api.retrieveTasks.mockReset();
+//         api.retrieveTasks.mockImplementation(
+//             async () => {
+//                 return [];
+//             }
+//         );
+
+//         expect(api.retrieveTasks.mock.calls.length).toEqual(2);
+//         expect(screen.queryAllByTestId(activeListId).length).toBe(0);
+//         expect(screen.queryAllByTestId(completedListId).length).toBe(0);
+//     });
+//   });
+});

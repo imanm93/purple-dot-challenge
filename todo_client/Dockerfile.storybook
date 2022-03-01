@@ -1,0 +1,17 @@
+FROM node:16.14-alpine
+
+RUN apk add --update bash
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN yarn
+
+ADD . ./
+
+RUN yarn tsc
+
+CMD ["yarn", "storybook"]
+
+EXPOSE 6006
