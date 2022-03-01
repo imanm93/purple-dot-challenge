@@ -19,14 +19,25 @@ Now, run `make start-init` - that's all, enjoy the app! 😎
 
 ## Table of Contents  
 
-[1.0 Backend Design](../purple-dot-challenge/docs/api.md)  
-[1.1 Frontend Design](../purple-dot-challenge/docs/client.md)
+[1.0 Backend Design](./docs/api.md)  
+[1.1 Frontend Design](./docs/client.md)
 
 ## Tests
 
 The project was primary covered using unit tests. Though I have briefly used Cypress in the past, I would have taken up too much refreshing my memory and upskilling for this take home assignment to include integration tests.
 
 run `make test` for all tests
+
+## Notes
+
+- Due to an unexpected issue faced with the PostgresDB conn, a lot of time was wasted on fixing it. To that end, I was unable to write frontend tests for the main page at the very least. I have left the skeleton test file in the code as `Todo.txt` atm. In all honesty, I am dissapointed with my test coverage.
+
+- Attempted to show a wide variety of skills from DevOps, Backend, to Frontend development - through the use of some nice tools such as storybook, and redoc. I am keen to here your opinions on these tools!
+
+- **Total Time Spent**:
+  - **Coding:** 3 hrs
+  - **Docs:** 1 hr
+  - **Debugging:** 2/3 hrs
 
 ## Next Steps
 
