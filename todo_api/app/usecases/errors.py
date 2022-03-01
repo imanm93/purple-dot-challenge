@@ -1,0 +1,2 @@
+class ToDoRepoError(Exception):
+    pass
