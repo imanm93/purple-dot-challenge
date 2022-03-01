@@ -1,0 +1,24 @@
+FROM node:16.14-alpine
+
+ENV ENV_NAME dev
+ENV EGG_SERVER_ENV dev
+ENV NODE_ENV dev
+ENV NODE_CONFIG_ENV dev
+
+RUN apk add --update bash
+
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+
+COPY package.json ./
+COPY yarn.lock /app
+
+RUN yarn
+
+ADD . .
+
+RUN yarn build
+
+CMD [ "yarn", "start" ]
+
+EXPOSE 3000

@@ -1,0 +1,11 @@
+{
+    "title": "ToDo",
+    "subtitle": "Add tasks to your list",
+    "labelFilters": "Filter tasks",
+    "btnSubmit": "Add",
+    "btnSave": "Save",
+    "btnDelete": "Delete",
+    "btnClear": "Clear Tasks",
+    "emptyListDisplayText": "No tasks in this list",
+    "formTextPlaceholder": "e.g. use PurpleDot ..."
+}
