@@ -1,0 +1,22 @@
+FROM python:3.8-slim
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONPATH=/app
+
+COPY app/requirements.txt start.sh test.sh lint.sh ./
+
+RUN apt-get update \
+    && apt-get install -y postgresql-client curl netcat \
+    && pip install --no-cache-dir -r requirements.txt \
+    && chmod +x /start.sh \
+    && rm requirements.txt \
+    && rm -rf /var/cache/apt/*  /var/lib/apt/lists/*
+
+WORKDIR /app
+EXPOSE 8000
+EXPOSE 5432
+
+COPY . ./app
+
+CMD ["./start.sh"]
