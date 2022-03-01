@@ -1,0 +1,71 @@
+version: '3.3'
+
+services:
+  client:
+    build:
+      context: ./todo_client
+      dockerfile: Dockerfile.client
+    ports:
+      - 3000:3000
+    expose:
+      - 8000
+    volumes:
+      - ./todo_client:/app
+    depends_on:
+      - postgres
+      - api
+    environment:
+      - TODO_API_URL=http://localhost:8000/v1
+    command: yarn start:dev
+
+  storybook:
+    build:
+      context: ./todo_client
+      dockerfile: Dockerfile.storybook
+    ports:
+      - 6006:6006
+    volumes:
+      - ./todo_client:/app
+
+  api:
+    build:
+      context: ./todo_api
+      dockerfile: Dockerfile.api
+    volumes:
+      - ./todo_api/:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres
+    environment:
+      - ENV=local
+      - BACKEND_CORS_ORIGINS=["http://localhost:3000"]
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_DB=postgres
+      - POSTGRES_CONNECTION_POOL_SIZE=5
+      - POSTGRES_CONNECTION_MAX_OVERFLOW=20
+    expose:
+      - 5432
+    command: ./start.sh --reload
+
+  postgres:
+    image: postgres:13.6
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=postgres
+      - POSTGRES_SERVER=posgres
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=postgres
+    ports:
+      - 5432:5432
+
+volumes:
+  db_data: {}
