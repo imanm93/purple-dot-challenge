@@ -13,7 +13,7 @@ todo_api
     ↳ api
 ```
 
-The above structure allows you to easily add new outer layers without the need to touch underlying business logic. For example, ...
+The above structure allows you to easily add new outer layers without the need to touch underlying business logic.
 
 ### 📞 API Design
 
